@@ -1,6 +1,7 @@
 package tests;
 
 import model.DataList;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import spec.Request;
 
@@ -8,6 +9,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
+@Tag("api")
 public class MainApiTests {
 
     @Test
@@ -39,6 +41,7 @@ public class MainApiTests {
         assertThat(dataList.getData().get(0).getCategory().getPrefix(), is("estate"));
     // @formatter:on
     }
+
     @Test
     public void checkLandingKasko(){
         given()
@@ -49,8 +52,3 @@ public class MainApiTests {
                 .body("data.identity", is("kasko"));
     }
 }
-
-
-
-
-

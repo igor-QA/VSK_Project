@@ -2,6 +2,7 @@ package tests;
 
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.appear;
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selectors.byValue;
 import static com.codeborne.selenide.Selenide.*;
 import static com.codeborne.selenide.Selenide.$;
 
+@Tag("web")
 public class FeedbackPageTests extends TestBase {
 
     @DisplayName("Проверить раздел 'Обратная связь' ")

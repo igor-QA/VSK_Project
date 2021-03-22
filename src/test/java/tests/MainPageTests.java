@@ -1,21 +1,21 @@
 package tests;
 
-import com.codeborne.selenide.Configuration;
 import io.qameta.allure.Story;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selectors.byValue;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
+@Tag("web")
 public class MainPageTests extends TestBase {
 
-    @DisplayName("Проверить раздел Документы ВСК")
     @Test
+    @DisplayName("Проверить раздел Документы ВСК")
+    @Story("Пользователь должен успешно перейти в раздел документы")
     public void checkDocumentsVSKPage() {
         open("");
         $("a[href='/about/']").click();
@@ -23,8 +23,9 @@ public class MainPageTests extends TestBase {
         $("h1").should(text("Документы ВСК"));
     }
 
-    @DisplayName("Проверить раздел 'Страхование авиационных рисков' ")
     @Test
+    @DisplayName("Проверить раздел 'Страхование авиационных рисков' ")
+    @Story("Пользователь должен успешно перейти в раздел Авиационные риски")
     public void checkAviationRisksPage() {
         open("");
         $("a[href='/companies/']").click();
@@ -32,8 +33,9 @@ public class MainPageTests extends TestBase {
         $("h1").should(text("Страхование авиационных рисков"));
     }
 
-    @DisplayName("Проверить раздел 'Страховой случай-Авто'")
     @Test
+    @DisplayName("Проверить раздел 'Страховой случай-Авто'")
+    @Story("Пользователь должен успешно перейти в События -> Раздел ОСАГО")
     public void checkEventPage(){
         open("event/");
         $(byText("Авто")).click();
