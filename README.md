@@ -10,6 +10,6 @@
 ![](https://fs.getcourse.ru/fileservice/file/download/a/159627/sc/179/h/00b2b6a41783dd126ef5b15de31c9e08.png)
 ![](https://fs.getcourse.ru/fileservice/file/download/a/159627/sc/135/h/54c3bb650bb68d170c809e5c8b1f1620.png)
 ![](https://fs.getcourse.ru/fileservice/file/download/a/159627/sc/471/h/af8dac704b92a8bcdc35b6bad6e68a0b.png)
-![](https://starchenkov.pro/qa-guru/img/skills/Rest-Assured.png)
+![](https://rest-assured.io/img/logo-transparent.png)
 
 ### 
