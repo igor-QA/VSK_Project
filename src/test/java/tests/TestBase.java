@@ -1,7 +1,6 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
-import helpers.ConfigHelper;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -12,6 +11,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.codeborne.selenide.FileDownloadMode.FOLDER;
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.AttachmentsHelper.*;
@@ -28,7 +28,8 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        Configuration.remote = ConfigHelper.getURL();
+        Configuration.fileDownload = FOLDER;
+        //Configuration.remote = ConfigHelper.getURL();
         //Configuration.browser = "firefox";
         //Configuration.browserSize = "1900x1200";
 
