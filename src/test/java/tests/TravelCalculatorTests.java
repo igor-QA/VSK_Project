@@ -5,6 +5,8 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -26,7 +28,7 @@ public class TravelCalculatorTests extends TestBase {
         executeJavaScript("window.scrollBy(0,600)"); //TODO Другими путями не скролиться, только js;
         $(byText("Несколько поездок в год")).click();
         $(byText("60")).click();
-        $(byText("Багаж")).scrollIntoView(true).click(); });
+        $(byText("Багаж")).scrollIntoView(true).click(); }); //TODO Тест может падать из-за долгой загрузки на сайте;
 
     step("Проверить усешность расчета страхового полиса", ()->
         $("p.sidebar-travel__price").shouldBe(visible)); //TODO value = 6 191 ₽

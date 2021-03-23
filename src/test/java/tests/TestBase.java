@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import helpers.ConfigHelper;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -27,7 +28,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        //Configuration.remote = ConfigHelper.getURL();
+        Configuration.remote = ConfigHelper.getURL();
         //Configuration.browser = "firefox";
         //Configuration.browserSize = "1900x1200";
 
