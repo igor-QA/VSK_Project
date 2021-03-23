@@ -16,5 +16,9 @@
 ### Стек технологий
 Java, Gradle, Junit5, Selenide, Rest-Assured, Allure Reports, Jenkins, Selenoid, Telegram Bot, Jira.
 
+### Скриншоты
+
+* Можно посмотреть здесь: https://telegra.ph/VSK-Project-03-23
+
 
 
