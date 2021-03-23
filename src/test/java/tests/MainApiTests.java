@@ -14,19 +14,19 @@ public class MainApiTests {
 
     @Test
     public void checkLandingPage() {
-    // @formatter:off
+        // @formatter:off
         given()
                 .spec(Request.spec())
                 .get("content/landing")
                 .then()
                 .statusCode(200)
                 .body("data.auto.identity", is("auto"));
-    // @formatter:on
+        // @formatter:on
     }
 
     @Test
-    public void checkProducts (){
-    // @formatter:off
+    public void checkProducts() {
+        // @formatter:off
         DataList dataList = given()
                 .spec(Request.spec())
                 .get("products")
@@ -39,16 +39,18 @@ public class MainApiTests {
         assertThat(dataList.getData().get(0).getPage(), is("estate"));
         assertThat(dataList.getData().get(0).getCategory().getName(), is("Имущество"));
         assertThat(dataList.getData().get(0).getCategory().getPrefix(), is("estate"));
-    // @formatter:on
+        // @formatter:on
     }
 
     @Test
-    public void checkLandingKasko(){
+    public void checkLandingKasko() {
+        // @formatter:off
         given()
                 .spec(Request.spec())
                 .get("content/landing/kasko")
                 .then()
                 .statusCode(200)
                 .body("data.identity", is("kasko"));
+        // @formatter:on
     }
 }

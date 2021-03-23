@@ -29,6 +29,7 @@ public class FeedbackPageTests extends TestBase {
         $("#FeedbackForm_email").val("test@test.ru").click();
         $(".b-checkbox__checker").click();
         $(byValue("Отправить")).click();
-        $("html").should(appear); //TODO Страница открывается в нижний ее части, что неверно!
+        $(".js-success-message b-feedback-page__success").should(appear); //TODO Страница открывается в нижний ее части и номер заявки не попадает в поле видимости
+
     }
 }
