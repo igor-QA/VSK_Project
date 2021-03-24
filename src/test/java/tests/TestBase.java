@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
+import helpers.ConfigHelper;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -29,7 +30,7 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
         Configuration.fileDownload = FOLDER;
-        //Configuration.remote = ConfigHelper.getURL();
+        Configuration.remote = ConfigHelper.getURL();
         //Configuration.browser = "firefox";
         //Configuration.browserSize = "1900x1200";
 
