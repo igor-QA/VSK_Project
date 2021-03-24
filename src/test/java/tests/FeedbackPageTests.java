@@ -34,7 +34,8 @@ public class FeedbackPageTests extends TestBase {
         $(byValue("Отправить")).scrollIntoView(true).click();
 
     step("Проверить успешность отправки формы", () ->
-        $(".js-success-message b-feedback-page__success").should(appear)); //TODO Страница открывается в нижний ее части и номер заявки не попадает в поле видимости
+        $(".js-success-message b-feedback-page__success").should(appear));
+    //TODO Страница открывается в нижний ее части и номер заявки не попадает в поле видимости
 
     }
 }
