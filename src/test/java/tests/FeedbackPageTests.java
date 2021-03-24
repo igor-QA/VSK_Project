@@ -31,7 +31,7 @@ public class FeedbackPageTests extends TestBase {
         $("#FeedbackForm_phone").val("79999999999").click();
         $("#FeedbackForm_email").val("test@test.ru").click();
         $(".b-checkbox__checker").click(); });
-        $(byValue("Отправить")).click();
+        $(byValue("Отправить")).scrollIntoView(true).click();
 
     step("Проверить успешность отправки формы", () ->
         $(".js-success-message b-feedback-page__success").should(appear)); //TODO Страница открывается в нижний ее части и номер заявки не попадает в поле видимости
