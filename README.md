@@ -18,7 +18,7 @@ Java, Gradle, Junit5, Selenide, Rest-Assured, Allure Reports, Jenkins, Selenoid,
 
 ### Скриншоты
 
-* Можно посмотреть здесь: https://telegra.ph/VSK-Project-03-23
+Можно посмотреть здесь: https://telegra.ph/VSK-Project-03-23
 
 
 
