@@ -1,4 +1,4 @@
-package tests;
+package api.tests;
 
 import model.DataList;
 import org.junit.jupiter.api.Tag;

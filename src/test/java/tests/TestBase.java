@@ -1,13 +1,14 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
-import helpers.ConfigHelper;
 import io.qameta.allure.Step;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import pages.FeedbackPage;
+import pages.TravelCalculatorPage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,6 +19,13 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 import static helpers.AttachmentsHelper.*;
 
 public class TestBase {
+    TravelCalculatorPage travelCalculatorPage = new TravelCalculatorPage();
+    FeedbackPage feedbackPage = new FeedbackPage();
+
+    public final String fullName = "Тестов Тест Тестович";
+    public final String dayOfBirth = "13.11.1986";
+    public final String phoneNumber = "79999999999";
+    public final String userEmail = "test@test.ru";
 
     @BeforeAll
     static void setup() {
@@ -30,8 +38,8 @@ public class TestBase {
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
         Configuration.fileDownload = FOLDER;
-        Configuration.remote = ConfigHelper.getURL();
-        //Configuration.browser = "firefox";
+        //Configuration.remote = ConfigHelper.getURL();
+        Configuration.browser = "firefox";
         //Configuration.browserSize = "1900x1200";
 
         Map<String, Object> prefs = new HashMap<>();
@@ -40,8 +48,8 @@ public class TestBase {
         prefs.put("network.cookie.cookieBehavior", 2);
         prefs.put("profile.block_third_party_cookies", true);
         options.setExperimentalOption("prefs", prefs);  /**Выключить Cookies*/
-
     }
+
     @AfterEach
     @Step("Attachments")
     public void afterEach() {
