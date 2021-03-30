@@ -39,7 +39,7 @@ public class TestBase {
         Configuration.startMaximized = true;
         Configuration.fileDownload = FOLDER;
         //Configuration.remote = ConfigHelper.getURL();
-        Configuration.browser = "firefox";
+        //Configuration.browser = "firefox";
         //Configuration.browserSize = "1900x1200";
 
         Map<String, Object> prefs = new HashMap<>();
