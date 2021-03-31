@@ -22,7 +22,7 @@ public class TravelCalculatorPage {
         //$(byText("Багаж")).scrollIntoView(true).click(); //TODO Тест может падать из-за долгой загрузки на сайте;
     }
 
-    @Step("Проверить усешность расчета страхового полиса")
+    @Step("Проверить успешность расчета страхового полиса")
     public void checkCorrectPrice() {
         $("p.sidebar-travel__price").shouldHave(visible); //TODO value = 6 191 ₽
     }
