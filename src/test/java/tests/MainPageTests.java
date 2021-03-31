@@ -55,7 +55,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Проверить раздел 'Страховой случай-Авто'")
+    @DisplayName("Проверить раздел 'Страховой случай -> Авто'")
     @Story("Пользователь должен успешно перейти в События -> Раздел ОСАГО")
     public void checkEventPage() {
         step("Открыть страницу Страховые события", () -> open("event/"));

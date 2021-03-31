@@ -37,25 +37,25 @@ public class FeedbackPage {
         return this;
     }
 
-    @Step("Ввести ФИО")
+    @Step("Ввести ФИО: {fullName}")
     public FeedbackPage inputFullName(String fullName) {
         $("#FeedbackForm_name").val(fullName).click();
         return this;
     }
 
-    @Step("Ввести Число, Месяц, Год рождения(чч.ММ.гггг)")
+    @Step("Ввести Число, Месяц, Год рождения(чч.ММ.гггг): {dayOfBirth}")
     public FeedbackPage inputDateOfBirthday(String dayOfBirth) {
         $("#FeedbackForm_date").val(dayOfBirth).pressEnter();
         return this;
     }
 
-    @Step("Ввести номер контактного телефона")
+    @Step("Ввести номер контактного телефона: {phoneNumber}")
     public FeedbackPage inputPhone(String phoneNumber) {
         $("#FeedbackForm_phone").scrollIntoView(true).val(phoneNumber).click();
         return this;
     }
 
-    @Step("Ввести электронную почту")
+    @Step("Ввести электронную почту: {userEmail}")
     public FeedbackPage inputEmail(String userEmail) {
         $("#FeedbackForm_email").val(userEmail).click();
         return this;

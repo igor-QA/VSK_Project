@@ -24,6 +24,6 @@ public class TravelCalculatorPage {
 
     @Step("Проверить усешность расчета страхового полиса")
     public void checkCorrectPrice() {
-        $("p.sidebar-travel__price").shouldBe(visible); //TODO value = 6 191 ₽
+        $("p.sidebar-travel__price").shouldHave(visible); //TODO value = 6 191 ₽
     }
 }

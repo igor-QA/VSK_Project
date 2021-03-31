@@ -37,7 +37,7 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
         Configuration.browserCapabilities = capabilities;
         Configuration.startMaximized = true;
-        Configuration.fileDownload = FOLDER;
+        Configuration.fileDownload = FOLDER; //TODO PROXY
         //Configuration.remote = ConfigHelper.getURL();
         //Configuration.browser = "firefox";
         //Configuration.browserSize = "1900x1200";
