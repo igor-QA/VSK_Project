@@ -15,6 +15,7 @@ public class FeedbackPageTests extends TestBase {
     @Test
     public void checkFeedbackPage() {
         open("feedback/");
+
         feedbackPage
                 .selectQuestion()
                 .selectParameters()
@@ -29,6 +30,6 @@ public class FeedbackPageTests extends TestBase {
                 .clickSubmitBtn();
 
         feedbackPage.checkResult();
-//TODO Страница открывается в нижний ее части и номер заявки не попадает в поле видимости
+//TODO Страница открывается в нижней ее части и номер заявки не попадает в поле видимости
     }
 }

@@ -20,7 +20,7 @@ public class TravelCalculatorTests extends TestBase {
         step("Выбрать параметры для расчета страховки", () ->
                 travelCalculatorPage.selectOptions());
 
-        step("Проверить усешность расчета страхового полиса", () ->
+        step("Проверить успешность расчета страхового полиса", () ->
                 travelCalculatorPage.checkCorrectPrice());
     }
 }
